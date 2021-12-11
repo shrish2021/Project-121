@@ -1,0 +1,246 @@
+<html>
+    <head>
+        <title>
+            MobileNet vs. Google Lens
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <ol>
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="ball.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Button</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Mirror Ball</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Magnet ball is correct, therefore MobileNet is more accurate.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="bowl.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Bowl</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Bowl</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Bowl is correct, therefore tie.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="cup.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Mug</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Cup</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - </h4>
+                    <hr>
+                    <h4>Correct answer is cup, therefore MobileNet is more accurate.</h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="expomarker.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Green Expo Marker</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Expo Marker</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - </h4>
+                    <hr>
+                    <h4>Correct answer is Green Expo Marker, therefore Google Lens is more accurate.</h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="paper.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Paper</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Paper</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Correct answer is paper, therefore tie.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="pencil.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Pencil</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Pencil</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Correct answer is pencil, therefore tie.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="protractor.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Table Runner</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Protractor</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Correct answer is Protractor, therefore MobileNet is correct.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="rubikscube.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Rubiks Cube</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Rubiks Cube</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Correct answer is Rubiks Cube, therefore tie.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="shell.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Wood</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Sea Shell</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - </h4>
+                    <hr>
+                    <h4>Correct answer is shell, therefore MobileNet is more accurate.</h4>
+                </div>
+
+
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test Image - </b>
+                    <img src="soccerball.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span>Soccer ball</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> - 
+                    <span>Mini soccerball</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result - Correct answer is toy soccerball, therefore MobileNet is more accurate.</h4>
+                    <hr>
+                    <h4></h4>
+                </div>
+                <div class="col-xs-12 result">
+                    10 images were tested, MobileNet got 9 and Google Lens got 5 (all including ties). Therefore, <em>MobileNet</em> is more accurate.
+                </div>
+            </div>
+
+        </ol>
+        <div class="copy_right_footer">
+            Made By - Shrish Adhikari
+        </div>
+    </body>
+</html>
